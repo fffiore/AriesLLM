@@ -31,9 +31,7 @@ tensor reshape 逻辑误判导致频繁重新申请显存，以及 allocator 复
 
 ### 未完成的事情
 
-1. 所有的修改都在 **Qwen2.5 FP32** 的基础上  
-   暂不支持 LLaMA 和 量化（迁移比较简单，但我懒得搞了）。
+1. 所有的修改都在 **Qwen2.5 FP32** 的基础上，暂不支持 LLaMA 和 量化（迁移比较简单，但我懒得搞了）。
 
-2. 单 batch 带宽利用率过低  
-   多 batch 需要重写 KV cache、kernel、sampler、scheduler 部分  
+2. 单 batch 带宽利用率过低，多 batch 需要重写 KV cache、kernel、sampler、scheduler 部分  
    （有时间就做，进度缓慢...）。
